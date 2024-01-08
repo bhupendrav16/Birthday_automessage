@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'birthday/navbar.html' %}
+    <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+        <input type="text"  name = "name" placeholder="Enter the name">
+        <input type="textarea"  name = "address" placeholder="Enter the address">
+        <input type="date"  name = "dob" placeholder="Enter the date of birth">
+        <input type="date"  name = "date_of_joining" placeholder="Enter the date of joining">
+        <input type="email"  name = "email" placeholder="Enter the email">
+        <input type="text"  name = "phone_no" placeholder="Enter the phone">
+        <button type = "submit">Submit</button>
+    </form>
+</body>
+</html>
